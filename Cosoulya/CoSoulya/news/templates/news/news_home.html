@@ -1,0 +1,14 @@
+{% extends "main/layout.html" %}
+{% block title %}
+    <a>Главная страница</a>
+{%endblock%}
+{% block content %}
+    <div class="features">
+        {% for elem in news %}
+            <div class="alert alert-warning">
+                <h3>{{ elem.title }}</h3>
+                <h3>{{ elem.anons }}</h3>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
