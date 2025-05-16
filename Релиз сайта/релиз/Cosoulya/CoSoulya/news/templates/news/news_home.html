@@ -1,0 +1,17 @@
+{% extends "main/layout.html" %}
+{% block title %}
+    <a>Новости</a>
+{%endblock%}
+{% block content %}
+    <div class="features">
+        <h1> Новости </h1>
+        {% for elem in news %}
+            <div class="alert alert-warning">
+                <h4>{{ elem.title }}</h4>
+                <h5>{{ elem.anons }}</h5>
+                <h6>{{ elem.full_text}}</h6>
+                <a href="{{ elem.picture }}"><li><button class="btn btn-info"><i class="fa-solid fa-images"></i> изображение </button></li></a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
